@@ -247,3 +247,9 @@
 .header-three.header--sticky{
   background: linear-gradient(199deg, #3A3946 12.55%, #2B2A3B 87.45%);
 }
+
+.foot-company{
+  left: 20px;
+  position: relative;
+  width: 50%;
+}
