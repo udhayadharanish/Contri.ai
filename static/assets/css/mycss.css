@@ -1,0 +1,245 @@
+
+.companies div{
+
+    padding: 20px;
+
+}
+.ab-form{
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    display: none;
+}
+#contact2{
+    border: none;
+}
+
+.cancel{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.cancel img{
+    height: 30px;
+    width: 30px;
+    
+}
+
+[data-theme=dark] .cancel img{
+    filter: invert(1);
+}
+
+
+.flip-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    /* height: 100% */
+    height: 80px;
+    width: 100% ;
+}
+.scene{
+    top: 3px;
+    position: relative;
+    height: 100%;
+    /* width: 900px; */
+    perspective: 600px;
+    overflow: hidden;
+    text-align: start;
+    left: 3px;
+}
+.cube{
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: flip;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out  ;
+    animation-iteration-count: infinite;
+
+    
+}
+.cube_face{
+    position: absolute;
+    height: 100%;
+    backface-visibility: hidden;
+    /* background-color: transparent; */
+
+}
+.cube__face--right,.cube__face--left{}
+@keyframes flip {
+
+
+0%{transform: translateZ(-100px) rotateX(-180deg);}
+10%{transform: translateZ(-100px) rotateX(-90deg);}
+33%{transform: translateZ(-100px) rotateX(-90deg);}
+43%{transform: translateZ(-100px) rotateX( 0deg);}
+66%{transform: translateZ(-100px) rotateX( 0deg);}
+76%{transform: translateZ(-100px) rotateX(90deg);}
+100%{transform: translateZ(-100px) rotateX(90deg);}
+/* 100%{transform: translateZ(-100px) rotateX(  90deg);} */
+
+/* 100%{transform: translateZ(-100px) rotateX(-180deg);} */
+}
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); background-color: transparent;}
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); background-color:   transparent; }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); background-color: transparent;}
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); background-color: transparent;}
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); background-color: transparent;}
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); background-color: transparent;}
+
+.title{
+    font-family: var(--font-primary);
+}
+
+@media (max-width:768px) {
+    .pad-free{
+        padding: 30px;
+    }
+}
+.mailchimp{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Phone number */
+
+.intl-tel-input {
+    display: table-cell;
+  }
+  .intl-tel-input .selected-flag {
+    z-index: 4;
+  }
+  .intl-tel-input .country-list {
+    z-index: 5;
+  }
+  .input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+  }
+
+
+  /* Adjustments */
+  .banner-inner-area-contact-inner{
+    top: 0;
+    position: relative;
+  }
+
+  .rts-cta-area-start{
+    margin-top: 0px; 
+/*       Need to change */
+  }
+  .banner-inner-area-contact-inner{
+    padding-top: 0;
+  }
+  .many-more .title{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+#form-sb:disabled{
+  background-color: gray;
+}
+#form-sb:disabled:hover{
+  background-color: gray;
+}
+
+.loaderr div{
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  animation-name: pop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  z-index: 10000;
+  position: relative;
+}
+.loader div:nth-child(1){
+  animation-delay: 1s;
+}
+.loader div:nth-child(2){
+  animation-delay: 2s;
+}
+.loader div:nth-child(3){
+  animation-delay: 3s;
+}
+
+@keyframes pop {
+
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+.footer-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+#form-sb{
+  position: relative;
+}
+
+.load{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background-color: aliceblue;
+}
+
+.load img{
+  height: 30px;
+  width: 30px;
+  animation-timing-function: ease-in-out;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+.foot{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.foot i{
+  color: #0d6efd;
+}
