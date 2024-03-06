@@ -426,9 +426,13 @@ body {
   div.foot{
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
   }
-  div.foot .container-pay .row{
+  div.foot .container-pay {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 30px;
   }
 }
 

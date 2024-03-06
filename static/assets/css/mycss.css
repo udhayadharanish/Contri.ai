@@ -57,7 +57,7 @@
     position: relative;
     transform-style: preserve-3d;
     animation-name: flip;
-    animation-duration: 6s;
+    animation-duration: 8.5s;
     animation-timing-function: ease-in-out  ;
     animation-iteration-count: infinite;
 
@@ -245,8 +245,11 @@
 
 .foot .container-pay {
   
-  max-width: 700px;
+  /* max-width: 600px; */
   justify-content: end;
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
 }
 .foot .container-pay .grid-img {
   display: grid;
@@ -256,7 +259,7 @@
   /* justify-content: end; */
 }
 .foot .container-pay .grid-img img{
-  height: 50px;
+  height: 30px;
   
 }
 
@@ -288,9 +291,14 @@
   text-decoration: underline;
 }
 .foot-linkedin{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   gap: 10px;
   flex-wrap: nowrap;
   align-items: baseline;
+}
+
+
+.single-service-primary-3:hover .single-service-primary-3 svg path{
+  fill: blue ;
 }
