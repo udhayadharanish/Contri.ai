@@ -422,6 +422,16 @@ body {
   
 }
 
+@media (max-width:910px) {
+  div.foot{
+    flex-direction: column;
+    justify-content: center;
+  }
+  div.foot .container-pay .row{
+    justify-content: center;
+  }
+}
+
 h1,
 h2,
 h3,
