@@ -350,6 +350,42 @@ body {
     font-size: 25px;
   }
 }
+@media (max-width:454px){
+  .banner-wrapper-three-main  .title.we,
+  .banner-wrapper-three-main .cube .cube_face .title , 
+  .banner-wrapper-three-main .cube .cube_face .title *{
+    font-size: 23px;
+  }
+  .scene{
+    
+    width: 350px;
+    
+  }
+}
+@media (max-width:415px){
+  .banner-wrapper-three-main  .title.we,
+  .banner-wrapper-three-main .cube .cube_face .title , 
+  .banner-wrapper-three-main .cube .cube_face .title *{
+    font-size: 20px;
+  }
+  .scene{
+    
+    width: 320px;
+    
+  }
+}
+@media (max-width:320px) {
+  .banner-wrapper-three-main  .title.we,
+  .banner-wrapper-three-main .cube .cube_face .title , 
+  .banner-wrapper-three-main .cube .cube_face .title *{
+    font-size: 18px;
+  }
+  .scene{
+    
+    width: 250px;
+    
+  }
+}
 @media (max-width:991px) {
   .title.we{
     align-self: baseline;
