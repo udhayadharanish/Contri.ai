@@ -36,9 +36,9 @@
     }"></iframe>
 <iframe name="hiddenConfirm2" name="hiddenConfirm2" style="display: none;" onload="if(postSubmitted){
     console.log('form submitted')
-    // document.getElementById('load').style.display = 'none';
+    document.getElementById('load2').style.display = 'none';
     document.getElementById('post-info').innerHTML = 'Thank you for the reply.';
-    // document.getElementById('form-sb').setAttribute('disabled','true');
+    // document.getElementById('post-sb').setAttribute('disabled','true');
     }"></iframe>
 <style>
     .blog-content{
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-wrapper-main-three">
-                        <a href="./index.html" class="logo-area">
+                        <a href="/" class="logo-area">
                             <img src="static/assets/images/logo/ContriHeader.png" alt="logo" height="55" width="140" >
                         </a>
                         <div class="header-right-area">
@@ -261,39 +261,50 @@
                                     <div class="post-form-area mt--50">
                                         <h4 class="form-title">Leave a Reply</h4>
                                         <p class="desc">Your email address will not be published. Required fields are marked *</p>
-                                        <form  class="post-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfk9_KxQTg0mYYAKAUOCXlmfgMgoe3Xs_Jptzspa3dqgLfyfQ/formResponse" method="post" target="hiddenConfirm2" onsubmit="postSubmitted=true">
-                                            <!-- single inpout-area -->
+                                        <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfk9_KxQTg0mYYAKAUOCXlmfgMgoe3Xs_Jptzspa3dqgLfyfQ/formResponse" method="post" target="hiddenConfirm2" onsubmit="postSubmitted=true">
+                                            
+                                            
                                             <div class="single-input-area">
                                                 <label for="entry.2120157554">Full name</label>
-                                                <input id="name" name="entry.2120157554" type="text" placeholder="Your name" required="">
-                                                <i class="fa-regular fa-user"></i>
+                                                <input id="name" type="text" name="entry.2120157554" placeholder="Your name" required=""> 
+                                                <!-- <i class="fa-regular fa-user"></i> -->
                                             </div>
-                                            <!-- single inpout-area end -->
-                                            <!-- single inpout-area -->
+                    
                                             <div class="single-input-area">
-                                                <label for="entry.2065316609">Email address</label>
-                                                <input id="email" name="entry.2065316609" type="email" placeholder="Your email">
-                                                <i class="fa-regular fa-envelope"></i>
+                                                <label for="entry.2065316609">Email</label>
+                                                <input id="email" type="email" name="entry.2065316609" placeholder="Your email" required="">
+                                                <!-- <i class="fa-regular fa-envelope"></i> -->
                                             </div>
-                                            <!-- single inpout-area end -->
+                                            
                                             <div class="single-input-area">
                                                 <label for="entry.563813798">Number</label>
                                                 <input id="tel" type="number" name="entry.563813798" placeholder="Your phone number enter with country code" required="">
-                                                <i class="fa-solid fa-phone"></i>
+                                                <!-- <i class="fa-solid fa-phone"></i> -->
                                             </div>
-                                            <!-- single inpout-area -->
+                                            
                                             <div class="single-input-area text-area">
-                                                <label for="entry.390444232">Comment</label>
-                                                <textarea id="message" name="entry.390444232" placeholder="Comment"></textarea>
-                                                <i class="fa-regular fa-message"></i>
+                                                <label for="entry.390444232">Your Message</label>
+                                                <textarea id="message" name="entry.390444232" placeholder="Your message"></textarea>
+                                                <!-- <i class="fa-regular fa-message"></i> -->
                                             </div>
-                                            <!-- single inpout-area end -->
-                                            <button class="rts-btn btn-primary">Talk to us</button>
-                                            <div id="post-info" class="text-center text-primary mt-5 text-capitalize">
+                                            
+                                            
+                                            <button type="submit" class="rts-btn btn-primary" id="post-sb">
                     
-
-                                            </div>
-                                        </form>
+                                                
+                                                Send Message
+                                                <i class="fa-solid fa-location-arrow"></i>
+                                                
+                                                <div class="load" id="load2">
+                                                    <img src="static/assets/images/icons/loading.png" alt="" height="20">
+                                                </div>
+                    
+                                            </button>
+                                            <!-- message send confirmation -->
+                                            <div id="post-info" class="text-center text-primary mt-5 text-capitalize">
+                                        
+                    
+                                    </div></form>
                                     </div>
                                 </div>
                             </div>
