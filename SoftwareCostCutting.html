@@ -27,9 +27,27 @@
         justify-content: center;
     }
     .header-three.header--sticky{
-  background: linear-gradient(199deg, #3A3946 12.55%, #2B2A3B 87.45%);
-}
+        background: linear-gradient(199deg, #3A3946 12.55%, #2B2A3B 87.45%);
+    }
 </style>
+<script >
+
+    var submitted = false;
+    var postSubmitted = false;
+
+</script>
+<iframe name="hiddenConfirm" name="hiddenConfirm" style="display: none;" onload="if(submitted){
+    console.log('form submitted')
+    document.getElementById('.load').style.display = 'none';
+    document.getElementById('form-info').innerHTML = 'Form submitted successfully!';
+    document.getElementById('form-sb').setAttribute('disabled','true');
+    }"></iframe>
+<iframe name="hiddenConfirm2" name="hiddenConfirm2" style="display: none;" onload="if(postSubmitted){
+    console.log('form submitted')
+    // document.getElementById('load').style.display = 'none';
+    document.getElementById('post-info').innerHTML = 'Thank you for the reply.';
+    // document.getElementById('form-sb').setAttribute('disabled','true');
+    }"></iframe>
 
 <body>
 
@@ -39,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-wrapper-main-three">
-                        <a href="" class="logo-area">
+                        <a href="./index.html" class="logo-area">
                             <img src="static/assets/images/logo/ContriHeader.png" alt="logo" height="55" width="140" >
                         </a>
                         <div class="header-right-area">
@@ -208,29 +226,38 @@
                                     <div class="post-form-area mt--50">
                                         <h4 class="form-title">Leave a Reply</h4>
                                         <p class="desc">Your email address will not be published. Required fields are marked *</p>
-                                        <form class="post-form" action="#">
+                                        <form  class="post-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfk9_KxQTg0mYYAKAUOCXlmfgMgoe3Xs_Jptzspa3dqgLfyfQ/formResponse" method="post" target="hiddenConfirm2" onsubmit="postSubmitted=true">
                                             <!-- single inpout-area -->
                                             <div class="single-input-area">
-                                                <label for="name">Full name</label>
-                                                <input id="name" type="text" placeholder="Your name" required="">
+                                                <label for="entry.2120157554">Full name</label>
+                                                <input id="name" name="entry.2120157554" type="text" placeholder="Your name" required="">
                                                 <i class="fa-regular fa-user"></i>
                                             </div>
                                             <!-- single inpout-area end -->
                                             <!-- single inpout-area -->
                                             <div class="single-input-area">
-                                                <label for="email">Email address</label>
-                                                <input id="email" type="text" placeholder="Your email">
+                                                <label for="entry.2065316609">Email address</label>
+                                                <input id="email" name="entry.2065316609" type="email" placeholder="Your email">
                                                 <i class="fa-regular fa-envelope"></i>
                                             </div>
                                             <!-- single inpout-area end -->
+                                            <div class="single-input-area">
+                                                <label for="entry.563813798">Number</label>
+                                                <input id="tel" type="number" name="entry.563813798" placeholder="Your phone number enter with country code" required="">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
                                             <!-- single inpout-area -->
                                             <div class="single-input-area text-area">
-                                                <label for="message">Comment</label>
-                                                <textarea id="message" placeholder="Comment"></textarea>
+                                                <label for="entry.390444232">Comment</label>
+                                                <textarea id="message" name="entry.390444232" placeholder="Comment"></textarea>
                                                 <i class="fa-regular fa-message"></i>
                                             </div>
                                             <!-- single inpout-area end -->
-                                            <button class="rts-btn btn-primary">Post Comment</button>
+                                            <button class="rts-btn btn-primary">Talk to us</button>
+                                            <div id="post-info" class="text-center text-primary mt-5 text-capitalize">
+                    
+
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
