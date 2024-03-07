@@ -148,6 +148,11 @@
     align-items: center;
   }
   
+.many-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #form-sb:disabled{
   background-color: gray;
 }
